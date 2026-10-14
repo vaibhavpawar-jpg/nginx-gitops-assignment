@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    # Replace with your real Git remote URL before applying this manifest.
+    repoURL: https://github.com/YOUR_GITHUB_USERNAME/nginx-gitops-assignment.git
+    targetRevision: main
+    path: charts/nginx-app
+    helm:
+      releaseName: nginx-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: nginx-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

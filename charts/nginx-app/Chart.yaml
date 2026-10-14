@@ -1,0 +1,6 @@
+apiVersion: v2
+name: nginx-app
+description: NGINX app for a Kind and Argo CD GitOps learning assignment
+type: application
+version: 0.1.0
+appVersion: "v1"
