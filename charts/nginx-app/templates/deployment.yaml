@@ -9,8 +9,8 @@ spec:
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: {{ .Values.rollingUpdate.maxSurge | quote }}
-      maxUnavailable: {{ .Values.rollingUpdate.maxUnavailable | quote }}
+      maxSurge: {{ .Values.rollingUpdate.maxSurge }}
+      maxUnavailable: {{ .Values.rollingUpdate.maxUnavailable }}
   selector:
     matchLabels:
       {{- include "nginx-app.selectorLabels" . | nindent 6 }}

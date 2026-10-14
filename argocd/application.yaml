@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     # Replace with your real Git remote URL before applying this manifest.
-    repoURL: https://github.com/YOUR_GITHUB_USERNAME/nginx-gitops-assignment.git
+    repoURL: https://github.com/vaibhavpawar-jpg/nginx-gitops-assignment.git
     targetRevision: main
     path: charts/nginx-app
     helm:
