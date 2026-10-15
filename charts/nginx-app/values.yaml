@@ -2,7 +2,7 @@ replicaCount: 5
 
 image:
   repository: nginx-assignment
-  tag: v1
+  tag: v2
   pullPolicy: IfNotPresent
 
 service:
